@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            color: #333;
+        }
+        .logout-btn {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .logout-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>User Dashboard</h1>
+<p>Welcome to your user dashboard!</p>
+<!-- Content for the user dashboard -->
+
+<button class="logout-btn" onclick="logout()">Logout</button>
+
+<script>
+    function logout() {
+        // Redirect to the user login page
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>

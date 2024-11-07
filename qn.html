@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Assessment</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Question Block Styling */
+        .question {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .question label {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 8px;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease;
+        }
+
+        select:focus {
+            background-color: #f0f4f8;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.02);
+        }
+
+        /* Result Box Styling */
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            padding: 15px;
+            background-color: #eaf4fc;
+            border-left: 5px solid #2193b0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Assessment</h1>
+        <p>Please answer the following questions to get an idea of your mental well-being.</p>
+        <form id="assessment-form">
+            <div class="question">
+                <label>1. How often do you feel stressed?</label>
+                <select name="q1">
+                    <option value="0">Never</option>
+                    <option value="1">Sometimes</option>
+                    <option value="2">Often</option>
+                    <option value="3">Always</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>2. How often do you feel anxious?</label>
+                <select name="q2">
+                    <option value="0">Never</option>
+                    <option value="1">Sometimes</option>
+                    <option value="2">Often</option>
+                    <option value="3">Always</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>3. How well do you sleep at night?</label>
+                <select name="q3">
+                    <option value="0">Very well</option>
+                    <option value="1">Okay</option>
+                    <option value="2">Poorly</option>
+                    <option value="3">Very poorly</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>4. How often do you feel fatigued during the day?</label>
+                <select name="q4">
+                    <option value="0">Never</option>
+                    <option value="1">Sometimes</option>
+                    <option value="2">Often</option>
+                    <option value="3">Always</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>5. How often do you feel overwhelmed by your responsibilities?</label>
+                <select name="q5">
+                    <option value="0">Never</option>
+                    <option value="1">Sometimes</option>
+                    <option value="2">Often</option>
+                    <option value="3">Always</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>6. How often do you feel happy or content?</label>
+                <select name="q6">
+                    <option value="3">Always</option>
+                    <option value="2">Often</option>
+                    <option value="1">Sometimes</option>
+                    <option value="0">Never</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>7. How often do you feel irritable or angry?</label>
+                <select name="q7">
+                    <option value="0">Never</option>
+                    <option value="1">Sometimes</option>
+                    <option value="2">Often</option>
+                    <option value="3">Always</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>8. How often do you feel unable to concentrate on tasks?</label>
+                <select name="q8">
+                    <option value="0">Never</option>
+                    <option value="1">Sometimes</option>
+                    <option value="2">Often</option>
+                    <option value="3">Always</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>9. How satisfied are you with your current social life?</label>
+                <select name="q9">
+                    <option value="3">Very satisfied</option>
+                    <option value="2">Somewhat satisfied</option>
+                    <option value="1">Unsatisfied</option>
+                    <option value="0">Very unsatisfied</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>10. How often do you feel that you lack energy?</label>
+                <select name="q10">
+                    <option value="0">Never</option>
+                    <option value="1">Sometimes</option>
+                    <option value="2">Often</option>
+                    <option value="3">Always</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateScore()">Get Results</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        function calculateScore() {
+            const form = document.getElementById('assessment-form');
+            let score = 0;
+
+            for (let i = 1; i <= 10; i++) { 
+                const value = parseInt(form['q' + i].value);
+                score += value;
+            }
+
+            let resultText = '';
+
+            if (score <= 10) {
+                resultText = "Your mental health seems to be in a good state. Keep it up!";
+            } else if (score <= 20) {
+                resultText = "Your mental health is moderate. Consider practicing relaxation and self-care.";
+            } else {
+                resultText = "Your mental health may need attention. It might be helpful to speak with a professional.";
+            }
+
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
+</body>
+</html>
